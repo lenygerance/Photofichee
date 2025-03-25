@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat du traitement</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Photofichée</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'liste_photos' %}">Liste des Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'upload_photo' %}">Upload Photo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Résultat du traitement</h2>
+    {% if image_url %}
+        <p>Voici l'image traitée :</p>
+        <img src="{{ image_url }}" alt="Image traitée" class="img-fluid">
+    {% else %}
+        <p>Une erreur est survenue lors du traitement de l'image.</p>
+    {% endif %}
+</div>
+{% endblock %}
+
+</body>
+</html>

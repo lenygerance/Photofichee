@@ -1,0 +1,19 @@
+# Environnement virtuel
+venv/
+.venv/
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+
+# Fichiers médias (optionnel, ne pas partager les fichiers uploadés)
+media/
+
+# Configuration de l'éditeur
+.idea/
+
+# Fichiers de migration
+db.sqlite3
+
+# Secrets
+.env
