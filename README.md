@@ -17,4 +17,4 @@ Photofichee est une application web Fullstack développée avec **Django**. Elle
 ## 📦 Installation
 1. Cloner le projet :
    ```bash
-   git clone [https://github.com/lenygerance/Photofichee.git](https://github.com/lenygerance/Photofichee.git)
+   git clone https://github.com/lenygerance/Photofichee.git
